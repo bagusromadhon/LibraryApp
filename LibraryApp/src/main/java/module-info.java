@@ -5,4 +5,6 @@ module org.example.libraryapp {
 
     opens org.example.libraryapp to javafx.fxml;
     exports org.example.libraryapp;
+    exports org.example.libraryapp.Controller;
+    opens org.example.libraryapp.Controller to javafx.fxml;
 }
