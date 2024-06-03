@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.libraryapp.Controller.AdminDashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Admin Menu"/>
+
+    <Label text="Name"/>
+    <TextField fx:id="nameField" promptText="Enter name"/>
+
+    <Label text="NIM"/>
+    <TextField fx:id="nimField" promptText="Enter NIM"/>
+
+    <Label text="Fakultas"/>
+    <TextField fx:id="fakultasField" promptText="Enter fakultas"/>
+
+    <Label text="Program Studi"/>
+    <TextField fx:id="programStudiField" promptText="Enter program studi"/>
+
+    <Button text="Submit" onAction="#handleSubmitButtonAction"/>
+
+    <TableView fx:id="studentTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="nimColumn" text="NIM" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="nim"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="fakultasColumn" text="Fakultas" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="fakultas"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="programStudiColumn" text="Program Studi" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="programStudi"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>
