@@ -9,6 +9,7 @@
 <?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.ChoiceBox?>
 <VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="org.example.libraryapp.Controller.AdminDashboardController">
     <padding>
@@ -45,7 +46,7 @@
     <TextField fx:id="authorField" promptText="Enter Author"/>
 
     <Label text="Category"/>
-    <TextField fx:id="categoryField" promptText="Enter Category"/>
+    <ChoiceBox fx:id="categoryChoiceBox"/>
 
     <Label text="Stock"/>
     <TextField fx:id="stockField" promptText="Enter Stock"/>
@@ -53,6 +54,10 @@
     <Label text="Duration (days)"/>
     <TextField fx:id="durationField" promptText="Enter Duration"/>
 
+    <Label text="Borrower NIM"/>
+    <TextField fx:id="borrowerNIMField" text="Tidak Ada" promptText="Enter Borrower NIM"/>
+
+    <Button text="Logout" onAction="#handleLogoutButtonAction"/>
     <Button text="Submit" onAction="#handleBookSubmitButtonAction"/>
 
     <!-- Table to display books -->
@@ -86,6 +91,11 @@
             <TableColumn fx:id="durationColumn" text="Duration (days)" prefWidth="100">
                 <cellValueFactory>
                     <PropertyValueFactory property="duration"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="borrowerNIMColumn" text="Borrower NIM" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="borrowerNIM"/>
                 </cellValueFactory>
             </TableColumn>
         </columns>
