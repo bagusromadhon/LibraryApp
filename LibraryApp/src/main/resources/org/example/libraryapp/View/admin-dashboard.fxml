@@ -16,7 +16,7 @@
     </padding>
 
     <Label text="Admin Menu"/>
-
+    <Label text="Add Student "/>
     <Label text="Name"/>
     <TextField fx:id="nameField" promptText="Enter name"/>
 
@@ -30,6 +30,66 @@
     <TextField fx:id="programStudiField" promptText="Enter program studi"/>
 
     <Button text="Submit" onAction="#handleSubmitButtonAction"/>
+
+    <Label text="Add Book"/>
+
+
+    <!-- Form fields for book input -->
+    <Label text="Book ID"/>
+    <TextField fx:id="bookIdField" promptText="Enter Book ID"/>
+
+    <Label text="Title"/>
+    <TextField fx:id="titleField" promptText="Enter Title"/>
+
+    <Label text="Author"/>
+    <TextField fx:id="authorField" promptText="Enter Author"/>
+
+    <Label text="Category"/>
+    <TextField fx:id="categoryField" promptText="Enter Category"/>
+
+    <Label text="Stock"/>
+    <TextField fx:id="stockField" promptText="Enter Stock"/>
+
+    <Label text="Duration (days)"/>
+    <TextField fx:id="durationField" promptText="Enter Duration"/>
+
+    <Button text="Submit" onAction="#handleBookSubmitButtonAction"/>
+
+    <!-- Table to display books -->
+    <TableView fx:id="bookTable" prefHeight="200" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="bookIdColumn" text="Book ID" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="bookId"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="author"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="categoryColumn" text="Category" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="category"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="stockColumn" text="Stock" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stock"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="durationColumn" text="Duration (days)" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="duration"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
 
     <TableView fx:id="studentTable" prefHeight="200" prefWidth="400">
         <columns>
