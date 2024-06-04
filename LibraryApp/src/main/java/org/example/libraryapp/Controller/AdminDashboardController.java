@@ -128,7 +128,7 @@ public class AdminDashboardController {
             bookList.add(book);
             showAlert(Alert.AlertType.INFORMATION, "Success", "Book data added successfully.");
 
-            // Clear fields after submission
+
             bookIdField.clear();
             titleField.clear();
             authorField.clear();

@@ -26,7 +26,7 @@ public class HelloController {
     private Map<String, String> adminCredentials = new HashMap<>();
 
     public HelloController() {
-        // Initial data
+
         studentCredentials.put("123456789012345", "password123");
         studentCredentials.put("987654321098765", "password987");
         adminCredentials.put("adminadminadmin", "adminpassword");

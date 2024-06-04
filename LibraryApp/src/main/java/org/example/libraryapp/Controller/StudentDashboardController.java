@@ -87,7 +87,7 @@ public class StudentDashboardController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Initialize columns for availableBooksTable
+
         availableBookIdColumn.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         availableTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         availableAuthorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
@@ -95,7 +95,7 @@ public class StudentDashboardController implements Initializable {
         availableStockColumn.setCellValueFactory(new PropertyValueFactory<>("stock"));
         availableDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
 
-        // Initialize columns for borrowedBooksTable
+
         borrowedBookIdColumn.setCellValueFactory(new PropertyValueFactory<>("bookId"));
         borrowedTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         borrowedAuthorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
@@ -104,13 +104,13 @@ public class StudentDashboardController implements Initializable {
         borrowedDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
         borrowerNIMColumn.setCellValueFactory(new PropertyValueFactory<>("borrowerNIM"));
 
-        // Sample Data
+
         bookList.add(new Book("1", "Book One", "Author A", "History Book", 5, 7, "Tidak Ada"));
         bookList.add(new Book("2", "Book Two", "Author B", "Story Book", 3, 14, "123456789012345"));
         bookList.add(new Book("3", "Book Three", "Author C", "Text Book", 2, 21, "Tidak Ada"));
         bookList.add(new Book("4", "Book Four", "Author D", "Story Book", 4, 10, "678901234567890"));
 
-        // Filter books for availableBooksTable and borrowedBooksTable
+
         updateTables();
 
         availableBooksTable.setItems(getAvailableBooks());
