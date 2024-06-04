@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
 <AnchorPane prefHeight="697.0" prefWidth="1296.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.libraryapp.Controller.AdminDashboardController">
    <children>
    
@@ -84,14 +83,14 @@
              <TextField fx:id="fakultasField" layoutX="111.0" layoutY="554.0" promptText="Enter fakultas" />
              <TextField fx:id="programStudiField" layoutX="111.0" layoutY="519.0" promptText="Enter program studi" />
          
-                <Label layoutX="72.0" layoutY="118.0" text="Fakultas" />
+                <Label layoutX="31.0" layoutY="558.0" text="Fakultas" />
          
-                <Label layoutX="47.0" layoutY="36.0" text="NIM" />
+                <Label layoutX="34.0" layoutY="492.0" text="NIM" />
              <TextField fx:id="nimField" layoutX="111.0" layoutY="488.0" promptText="Enter NIM" />
          
-                <Button layoutX="308.0" layoutY="293.0" onAction="#handleSubmitButtonAction" text="Submit" />
+                <Button layoutX="113.0" layoutY="587.0" onAction="#handleSubmitButtonAction" text="Submit" />
          
-                <Label layoutX="164.0" layoutY="28.0" prefHeight="24.0" prefWidth="64.0" text="Add Book" />
+                <Label layoutX="236.0" layoutY="16.0" prefHeight="24.0" prefWidth="64.0" text="Add Book" />
          
             
                 <!-- Form fields for book input -->
@@ -105,26 +104,26 @@
          
                 <Label layoutX="183.0" layoutY="195.0" text="Category" />
              <TextField fx:id="stockField" layoutX="140.0" layoutY="169.0" promptText="Enter Stock" />
-             <ChoiceBox fx:id="categoryChoiceBox" layoutX="149.0" layoutY="211.0" prefHeight="16.0" prefWidth="146.0" />
+             <ChoiceBox fx:id="categoryChoiceBox" layoutX="139.0" layoutY="215.0" prefHeight="24.0" prefWidth="177.0" />
          
                 <Label layoutX="195.0" layoutY="150.0" text="Stock" />
          
-                <Label layoutX="308.0" layoutY="392.0" text="Duration (days)" />
-             <TextField fx:id="durationField" layoutX="255.0" layoutY="241.0" promptText="Enter Duration" />
-             <TextField fx:id="borrowerNIMField" layoutX="151.0" layoutY="321.0" promptText="Enter Borrower NIM" text="Tidak Ada" />
+                <Label layoutX="146.0" layoutY="239.0" text="Duration (days)" />
+             <TextField fx:id="durationField" layoutX="137.0" layoutY="256.0" promptText="Enter Duration" />
+             <TextField fx:id="borrowerNIMField" disable="true" layoutX="145.0" layoutY="349.0" promptText="Enter Borrower NIM" text="Tidak Ada" />
          
-                <Label layoutX="60.0" layoutY="325.0" text="Borrower NIM" />
+                <Label layoutX="149.0" layoutY="323.0" text="Borrower NIM" />
          
                 <Button layoutX="15.0" layoutY="659.0" onAction="#handleLogoutButtonAction" text="Logout" />
-             <Button layoutX="158.0" layoutY="400.0" onAction="#handleBookSubmitButtonAction" text="Submit" />
-             <TextField fx:id="authorField" layoutX="85.0" layoutY="281.0" promptText="Enter Author" />
+             <Button layoutX="167.0" layoutY="379.0" onAction="#handleBookSubmitButtonAction" text="Submit" />
+             <TextField fx:id="authorField" layoutX="140.0" layoutY="299.0" promptText="Enter Author" />
          
-                <Label layoutX="23.0" layoutY="142.0" text="Admin Menu" />
-             <Label layoutX="106.0" layoutY="265.0" text="Add Student " />
-             <Label layoutX="35.0" layoutY="215.0" text="Name" />
+                <Label layoutX="64.0" layoutY="20.0" text="Admin Menu" />
+             <Label layoutX="157.0" layoutY="423.0" text="Add Student " />
+             <Label layoutX="28.0" layoutY="458.0" text="Name" />
              <TextField fx:id="nameField" layoutX="111.0" layoutY="454.0" promptText="Enter name" />
          
-                <Label layoutX="13.0" layoutY="90.0" text="Program Studi" />
+                <Label layoutX="12.0" layoutY="523.0" text="Program Studi" />
          </children>
       </Pane>
    </children>
